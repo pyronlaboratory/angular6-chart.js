@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { WeatherService } from './weather.service';
-import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
 
+import { WeatherApiDataService } from './weather-api-data.service';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherApiDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
