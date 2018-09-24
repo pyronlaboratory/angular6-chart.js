@@ -1,15 +1,12 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import { WeatherService } from './weather.service';
+import { WeatherApiDataService } from './weather-api-data.service';
 
-describe('WeatherService', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [WeatherService]
-    });
-  });
+describe('WeatherApiDataService', () => {
+  beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', inject([WeatherService], (service: WeatherService) => {
+  it('should be created', () => {
+    const service: WeatherApiDataService = TestBed.get(WeatherApiDataService);
     expect(service).toBeTruthy();
-  }));
+  });
 });
